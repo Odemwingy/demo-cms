@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.DS_Store
+.env
+server/mma.db
+server/mma.db-journal
+松下 MMA 产品资料/
