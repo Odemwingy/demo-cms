@@ -11,6 +11,12 @@ This Content Management System (CMS) is a core operations platform specifically 
 1. **Autonomy and Data Sovereignty**: Achieves complete localization of the onboard content pipeline, supporting a custom tree structure category editor (Tree Builder) and global search.
 2. **Fine-Grained Orchestration**: Achieves extremely high degrees of freedom in route and cabin targeted delivery through Profile, Route, Class, and Category Builder.
 
+## 1.4 Functional Development Boundaries and External Integration
+To maintain the CMS's lightweight and pure nature as an orchestration and scheduling hub for metadata, the following development boundaries and exclusions are explicitly defined:
+- **Native Development Scope**: Apart from external integrations and explicitly excluded modules, this CMS will natively develop all core process mechanisms, such as organizational permission management, complex cycle workflow approvals (sign-off lock version), and automated package validation.
+- **Integration with External Media Asset Management (MAM) Platforms**: This CMS will **NOT natively develop** the management of heavy physical files (e.g., uploads, transcoding orchestration, technical format quality checks, DRM encryption packaging, and resumable massive distribution). Instead, the CMS provides standardized interfaces to associate and bind the processing results (media files) from the external MAM system at the Metadata level, strictly using **unique File IDs and unique file names**.
+- **Explicit Exclusions**: Business requirements related to the synchronization of external operational data (e.g., flight routes, fleet tail numbers, organization sync) and heavy report analytics and monitoring (e.g., playback analytics, fault monitoring, alarm rules) are entirely excluded from this system's planning and development scope.
+
 ---
 
 # 2. Access Control and Role System
